@@ -2,7 +2,12 @@ const Discord = require('discord.js')
 
 exports.run = async (client, message, args) => {
 
-    if (message.author.id != '897838071922446466') return;
+        if (!client.config.OwnerID.includes(message.author.id)) {
+			const nop = new MessageEmbed()
+			.setColor("RED")
+			.setDescription(`Xin lỗi, bạn không thể sử dụng lệnh này!`)
+			return message.channel.send({embeds: [nop]})
+		}
 
     client.calls.removeGuild(message.guild.id)
     client.calls.insertGuild(message.guild.id)

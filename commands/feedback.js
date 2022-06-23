@@ -9,10 +9,12 @@ exports.run = async (client, message, args) => {
         if (args) {
 
             let feedbackEmbed = new Discord.MessageEmbed()
-                .setAuthor({ name: `${message.author.username}'s Feedback`, iconURl: `${message.author.displayAvatarURL()}`})
+                .setAuthor({ name: `${message.author.username}'s Feedback`, iconURL: message.author.displayAvatarURL() })
                 .setDescription(`\`\`\`${args.join(" ")}\`\`\``)
                 .setColor("#C2E8FF")
-
+                .setFooter({
+                    text: `MemberID: ${message.author.id}`
+                })
 
             try {
                 

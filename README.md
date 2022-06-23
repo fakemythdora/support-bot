@@ -14,5 +14,10 @@ CREDITS - [notmythdora](https://discord.com/users/897838071922446466) & [Soyuri 
 ```npm i --save-dev node@16.13.2 && npm config set prefix=$(pwd)/node_modules/node && export PATH=$(pwd)/node_modules/node/bin:$PATH```
 
 # Self-Hosting
-Rename file: .envexaple to .env
-Fill: BOT_TOKEN and MONGO_URL
+Make a file: `.env`
+
+Fill this to `.env` file:
+```
+BOT_TOKEN = your_bot_token
+MONGO_URL = your_mongo_url
+```

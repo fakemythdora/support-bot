@@ -70,6 +70,6 @@ exports.run = async (client, message, args) => {
 exports.help = {
     name: 'suggest',
     aliases: ['suggest'],
-    description: 'Suggest something.',
+    description: 'Tạo ra một suggest',
     usage: ''
 };

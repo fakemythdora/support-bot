@@ -13,6 +13,12 @@
         "channelid" : "974868915278733332",
         "toggle" : true
     },
+    "addrole": {
+        "toggle" : true
+    },
+
+    "removerole": {
+        "toggle" : true
+    },
     "OwnerID": "897838071922446466"
 }
-

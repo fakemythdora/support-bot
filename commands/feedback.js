@@ -50,6 +50,6 @@ exports.run = async (client, message, args) => {
 exports.help = {
     name: 'feedback',
     aliases: ['fb'],
-    description: 'Feedback something.',
-    usage: ''
+    description: 'Tạo ra một feedback',
+    usage: '=feedback <your feedback>'
 };

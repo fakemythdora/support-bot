@@ -40,7 +40,7 @@ exports.run = async (client, message, args) => {
 
 exports.help = {
     name: 'addRole',
-    aliases: ['addrole', 'giverole', 'arole', 'radd', 'roleadd', 'addr'],
+    aliases: ['addrole', 'giverole', 'arole', 'radd', 'roleadd', 'addr', 'ar', 'ra'],
     description: 'Add role cho một người nào đó',
     usage: '=addrole @user @role'
 };

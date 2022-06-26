@@ -1,6 +1,6 @@
 const { Collection, MessageAttachment, MessageEmbed, User } = require('discord.js');
 
-const ms = require('pretty-ms');
+const ms = require('ms');
 let config = require('../config.json');
 const {
     checkFilter

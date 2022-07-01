@@ -14,7 +14,7 @@
         if (!code) {
           let embedMissingEvaluation = new MessageEmbed()
             .setDescription("Please provide something to evaluate!")
-            .setColor(config.messages.embeds.colors.no);
+            .setColor("RED");
           
           return message.reply({ embeds: [embedMissingEvaluation] });
         }
@@ -30,7 +30,7 @@
           .setTitle("Evaluation Done!")
           .addField("• Input:", `\`\`\`${code}\`\`\``)
           .addField("• Output:", `\`\`\`${evaled}\`\`\``)
-          .setColor(config.messages.embeds.colors.yes);
+          .setColor("GREEN");
   
         message.reply({embeds: [embedEvaluated]});
         
@@ -40,7 +40,7 @@
             .setAuthor({ name: client.user.username, iconURL: client.user.displayAvatarURL() })
             .setTitle("Evaluation Failed.")
             .addField("• Error:", `\`\`\`${err}\`\`\``)
-            .setColor(config.messages.embeds.colors.error);
+            .setColor("RED");
   
           message.reply({embeds: [embedEvaluationError]});
         

@@ -1,5 +1,4 @@
 const { MessageEmbed } = require("discord.js");
-const config = require("../../config.json");
 const wait = require('node:timers/promises').setTimeout;
 
 exports.run = async (client, message, args) => {

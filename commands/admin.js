@@ -8,7 +8,7 @@ exports.run = async (client, message, args) => {
         let embedadmin = new MessageEmbed()
             .setColor('#FFFFFF')	
             .setTitle('Command List')
-            .setDescription("**Normal Commands**\n`suggest`: Tạo ra một suggest\n`feedback`: Tạo ra một feedback\n`membercount`: Hiển thị số lượng thành viên trên server này\n`roleinfo`: Kiểm tra thông tin của role\n`serverinfo`: Kiểm tra thông tin của server\n`userinfo`: Kiểm tra thông tin account của bạn hoặc account của ai đó khác\n\n**Staff Commands**\n`faq`: Starsky Frequently Asked Questions (Onwer Only) \n`addRole`: Add role cho một người nào đó\n`removeRole`: Remove role cho một người nào đó\n`resetDatabase`: Reset Database (Owner Only)\n`announce`: Announce something\n`dm`: DM một user\n`eval`: Evaluate something (Owner only)\n`purge`: Xóa một lượng tin nhắn\n`slowmode`: Sets the channel's slowmode")
+            .setDescription("**Normal Commands**\n`suggest`: Tạo ra một suggest\n`feedback`: Tạo ra một feedback\n`membercount`: Hiển thị số lượng thành viên trên server này\n`roleinfo`: Kiểm tra thông tin của role\n`serverinfo`: Kiểm tra thông tin của server\n`userinfo`: Kiểm tra thông tin account của bạn hoặc account của ai đó khác\n\n**Staff Commands**\n`faq`: Starsky Frequently Asked Questions (Onwer Only) \n`addRole`: Add role cho một người nào đó\n`removeRole`: Remove role cho một người nào đó\n`resetDatabase`: Reset Database (Owner Only)\n`announce`: Announce something\n`dm`: DM một user\n`eval`: Evaluate something (Owner only)\n`purge`: Xóa một lượng tin nhắn\n`slowmode`: Sets the channel's slowmode\n`stats`: Show bot statistics")
             .setTimestamp()
         
     return message.channel.send({ embeds: [ embedadmin ] })

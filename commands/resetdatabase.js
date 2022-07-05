@@ -12,6 +12,20 @@ exports.run = async (client, message, args) => {
     client.calls.removeGuild(message.guild.id)
     client.calls.insertGuild(message.guild.id)
 
+    const masterLogger = client.channels.cache.get('986518047743442944');
+    if (masterLogger) {
+        await masterLogger.send({
+            embeds: [
+                new MessageEmbed()
+                    .setTitle('Client Reset Database')
+                    .setThumbnail(message.author.displayAvatarURL({ dynamic: true, size: 512 }))
+                    .setDescription(`**Actioned by** : ${message.author.tag}`)
+                    .setColor('GREEN')
+                    .setTimestamp(),
+            ],
+        });
+    }
+
 };
 
 exports.help = {

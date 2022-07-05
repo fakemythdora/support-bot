@@ -9,43 +9,14 @@ const { MessageEmbed } = require("discord.js");
             return message.channel.send({embeds: [nop]})
         }
 
-        try {
-        
-        const code = args.join(" ");
-        
-        if (!code) {
-          let embedMissingEvaluation = new MessageEmbed()
-            .setDescription("Please provide something to evaluate!")
-            .setColor("RED");
-          
-          return message.reply({ embeds: [embedMissingEvaluation] });
-        }
-          
-        let evaled = eval(code).catch(e => console.log(e));
-  
-        if (typeof evaled !== "string")
-          
-        evaled = require("util").inspect(evaled)
-  
-        let embedEvaluated = new MessageEmbed()
-          .setTitle("Evaluation Done!")
-          .addField("• Input:", `\`\`\`${code}\`\`\``)
-          .addField("• Output:", `\`\`\`${evaled}\`\`\``)
-          .setColor("GREEN");
-  
-        message.reply({embeds: [embedEvaluated]});
-        
-        } catch (err) {
-        
-          let embedEvaluationError = new MessageEmbed()
-            .setAuthor({ name: client.user.username, iconURL: client.user.displayAvatarURL() })
-            .setTitle("Evaluation Failed.")
-            .addField("• Error:", `\`\`\`${err}\`\`\``)
-            .setColor("RED");
-  
-          message.reply({embeds: [embedEvaluationError]});
-        
-      }
+        let codein = args.join(' ');
+		try {
+			let code = eval(codein);
+			if (typeof code !== 'string') code = require('util').inspect(code, { depth: 0 });
+			message.channel.send(`\`\`\`js\n${code}\n\`\`\``);
+		} catch (e) {
+			return message.channel.send(`\`\`\`js\n${e}\n\`\`\``);
+		}
 
     };
     

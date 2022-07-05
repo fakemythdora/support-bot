@@ -4,6 +4,8 @@ const { connection } = require('mongoose');
 
 exports.run = async (client, message, args) => {
 
+  if(!message.member.permissions.has("MANAGE_MESSAGES")) return message.channel.send("❌ | Bạn không có quyền để sử dụng lệnh này!");
+
     let arch = os.arch();
     let platform = os.platform();
     let shard = client.ws.shards.size;
